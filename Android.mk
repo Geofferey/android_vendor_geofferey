@@ -89,6 +89,12 @@ $(shell cp $(LOCAL_PATH)/sysinit/sysinit-eng.rc $(TARGET_OUT_ETC)/init/sysinit.r
 
 endif
 
+include $(CLEAR_VARS)
+LOCAL_MODULE := autodata
+LOCAL_MODULE_TAGS := optional
+$(shell mkdir -p $(TARGET_OUT_ETC)/init.d)
+$(shell cp $(LOCAL_PATH)/init.d/Z99daedwgs.sh $(TARGET_OUT_ETC)/init.d/Z99daedwgs.sh)
+
 #include $(CLEAR_VARS)
 #LOCAL_MODULE       := GCam
 #LOCAL_PACKAGE_NAME := GCam
